@@ -1,0 +1,620 @@
+body{
+	font-family: 'Raleway', sans-serif;
+	background-color: #fff;
+	font-size: 16px;
+}
+h2{
+	background: url(../img/headingstyle.jpeg);
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: bottom;
+    margin: 3% 0 3% 0;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.img-width{
+	width: 100%;
+}
+/* bootstrap carousel fade effect */
+/*
+  Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
+  CSS from:       http://codepen.io/transportedman/pen/NPWRGq
+  and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb 
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+#top{
+	
+}
+#top ul{
+  overflow: hidden;
+}
+#top ul li{
+	float: left;
+}
+#top .social ul li{
+	width: 40px;
+	height: 40px;
+	background-color: #eee;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 10px;
+}
+#top .social ul li:first-child{
+  background-color: transparent;
+  border-radius: 0;
+}
+#top .social ul li a i{
+	margin: 12px;
+}
+#top .social ul li a:hover{
+	cursor: pointer;
+}
+#top .contact-info ul li{
+	margin-top: 3.5%;
+    margin-left: 7%;
+    color: #fff;
+}
+#main-slider img{
+	width: 100%;
+	height: 600px;
+}
+#slider div.fade-color{
+	background-color: rgba(0, 0, 0, .5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9;
+	top: 0;
+}
+#slider div.fade-color h1{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+    margin-top: 20%;
+    color: yellow;
+    font-size: 400%;
+}
+#slider div.fade-color img{
+	width: 70px;
+    height: 70px;
+}
+#slider div.fade-color span{
+	position: absolute;
+    top: 16%;
+    left: 8%;
+}
+.affix-top{
+  background-color: rgba(255, 255, 255, .1);
+  transition: .3s;
+}
+#header{
+  background-color: rgba(255, 255, 255, .1);
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+#header.affix{
+  background-color: rgba(0, 0, 0, .8);
+  transition: .3s;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* about start */
+#about{
+	padding: 5% 0;
+	text-align: justify;
+}
+#about h2{
+	
+}
+
+#about .col-md-6.founder img{
+	margin: 0 auto;
+	width: 50%;
+}
+.res-img img{
+	height: 200px;
+	width: 100%;
+}
+#menu-cat .menu-top ul {
+	display: flex;
+	justify-content:center;
+}
+#menu-cat .menu-top ul li{
+	margin: 0 1% 0 1%;
+}
+
+#menu-cat .menu-top ul li:first-child,
+#menu-cat .menu-top ul li:last-child{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+#menu-list{
+	background: url('../img/1 (1).jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#menu-list .container-fluid{
+	background-color: rgba(0, 0, 0, .5)
+}
+#menu-list .menu-list-inner{
+	text-align: center;
+}
+#menu-list img{
+	width: 170px;
+	margin: 0 auto;
+	border: 1px solid rgb(255, 0, 0);
+	height: 250px;
+}
+
+#menu-list .menu-list-inner{
+	color: rgb(255, 255, 255);
+	padding: 10%;
+	text-align: justify;
+	overflow: hidden;
+	transition: 1s;
+}
+#menu-list .menu-list-inner h4{
+	text-align: center;
+	text-decoration: underline;
+}
+#menu-list .menu-list-inner a{
+	float: right;
+	overflow: hidden;
+}
+#menu-list .menu-list-inner:hover{
+	background-color: rgba(0, 0, 0, .5);
+	transition: .5s;
+}
+.pride-content{
+	padding: 10%;
+	text-align: justify;
+}
+.pride-img img{
+	width: 100%;
+	height: 300px;
+	margin-bottom: 25px;
+	border: 1px solid rgb(255, 0, 0);
+	overflow: hidden;
+}
+.pride-img-hover{
+	position: relative;
+}
+.pride-hover{
+	position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, .6);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+.pride-img-hover:hover .pride-hover{
+	width: 100%;
+    left: 0;
+	display: block;
+}
+.pride-hover p{
+	white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+#indoor-outdoor{
+	background-image: url('../img/crowne-plaza-jamaica-2620186602-4x3.jpg');
+	padding: 10%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#indoor-outdoor h2, #indoor-outdoor h3{
+	font-size: 250%;
+	text-decoration: none;
+	background: none;
+}
+
+#contact .form-group input{
+	width: 49%;
+    display: inline;
+}
+#contact input[type='submit']{
+	margin-top: 10px;
+}
+#contact input[type='submit']:hover{
+	background-color: rgba(0, 0, 0, .5);
+	transition: .5s;
+	color: #fff;
+}
+#contact img{
+	margin: 0 auto;
+	height: 100%;
+}
+#location iframe{
+    pointer-events: none;
+}
+.logo{
+	width: 50px;
+}
+footer{
+	
+}
+#footer{
+	background-image: url('../img/1.jpg');
+	background-size: cover;
+	padding: 2%;
+	color: #fff;
+}
+#footer h3, #footer p{
+	color: yellow;
+}
+nav a{
+	color: yellow;
+	font-size: 130%;
+	margin: 10px;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: gray; /* Set a background color */
+    color: yellow; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* loader */
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* css for search box */
+.search {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../img/download.png');
+    background-size: 25px;
+    background-position: 4px 3px;
+    background-repeat: no-repeat;
+    padding: 5px 33px 5px 30px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-top: 12px;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.search:focus {
+    width: 100%;
+}
+
+/* gallery modal css */
+
+/* The Modal (background) */
+#gallery .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+/* Modal Content */
+#gallery .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+#gallery .close {
+  color: white;
+  position: absolute;
+  top: 15%;
+  right: 27px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#gallery .close:hover,
+#gallery .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#gallery .mySlides {
+  display: none;
+}
+#gallery .mySlides img{
+    width: 100%;
+    height: 520px;
+}
+/* Next & previous buttons */
+#gallery .prev,
+#gallery .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+#gallery .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#gallery .prev:hover,
+#gallery .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Number text (1/3 etc) */
+#gallery .numbertext {
+  color: #f2dede;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+#gallery .caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+#gallery img.hover-shadow {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#gallery .hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+/* css for food menu */
+#food-top{
+  background-image: url('../img/crowne-plaza-dubai-2532227697-4x3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#food-top h2{
+    padding: 12% 0;
+    margin: 0;
+    color: #fff;
+    background-image: none;
+    font-size: 400%;
+    background-color: rgba(0, 0, 0, .5)
+}
+#food-menu{
+	padding: 3%;
+}
+#food-menu ul.nav-tabs{
+	display: flex;
+	justify-content: space-around;
+}
+#food-menu p{
+	text-align: justify;
+}
+#food-menu h2 + p{
+	text-align: center;
+}
+#special{
+	background-image: url('../img/Beetroot-with-Carrot-apple-ginger-juice.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#special h2{
+	padding: 15% 0;
+	background-color: rgba(0, 0, 0, .6);
+	color: #fff;
+	background-image: none;
+  font-size: 400%;
+}
+
+/* reserve css */
+#indoor-img{
+	background: url('../img/crowne-plaza-dubai-2532227697-4x3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#indoor-img h2,#outdoor-img h2{
+	padding: 17% 0;
+	font-size: 300%;
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	background-image: none;
+  margin: 0;
+}
+#outdoor-img{
+	background: url('../img/crowne-plaza-xiamen-3881687702-4x3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#indoor .pride-img img,
+#outdoor .pride-img img{
+	height: auto;
+}
+.pride-img h2{
+    font-size: 300%;
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    color: #12eb9b;
+    font-weight: bold;
+    background-color: rgba(0,0,0,.5);
+    background-image: none;
+    padding-bottom: 0;
+}
+.pride-hover ul{
+	position: relative;
+    top: 44%;
+}
+.pride-hover ul li{
+	background-color: rgba(255,255,255,.7);
+    margin-bottom: 10px;
+    font-size: 150%;
+    list-style: none;
+}

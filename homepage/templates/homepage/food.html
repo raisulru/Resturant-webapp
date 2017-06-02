@@ -1,0 +1,83 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+{% block title %}
+  Food-menu
+{% endblock %}
+{% block content %}
+<div id="food-top">
+  <h2>Welcome to our awesome food menu</h2>
+</div>
+<div id="food-menu">
+  <div class="container">
+    <div id="sidebar" class="col-md-4">
+  <h1>Categories</h1>
+
+  <ul class="list-unstyled">
+    <li {% if not category %}class="selected"{% endif %}>
+      <a href="{% url "homepage:FoodView" %}">All</a>
+    </li>
+    {% for c in categories %}
+    <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+      <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="main" class="product-list col-md-8">
+  <h1>{% if category %}{{ category.name }}{% else %}Foods{% endif %}</h1>
+  <hr>
+  {% for food in foods %}
+    <div class="tem text-center col-md-3">
+      
+        <img src="{% if food.image %} {{ food.image.url }}{% else %} {% static "img/no_image.png" %}{% endif %}" class="img-responsive" alt="">
+     
+      {{ food.name }}
+      <br>
+      &#2547;{{ food.price }}
+    </div>
+  {% endfor %}
+</div>
+  
+  </div>
+</div>
+
+  <div id="special">
+      <h2>everyday you can take some awesome fruit juice</h2>
+  </div>
+  
+  <div id="special-item">
+    <div class="container">
+      <h2>our local fruits and juice </h2>
+      <p class="text-center">This is not for home delevery</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/c217cabaf69c06f09ab54cdb81dcf8cc.jpg" alt="" class="img-width">
+            </div>
+            <div class="col-md-8">
+              <h3>Food name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolorem totam ipsa vel aliquid, om.</p>
+              <p class="price">&#2547;200</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/pexels-photo-65171-medium.jpeg" alt="" class="img-width">
+            </div>
+            <div class="col-md-8">
+              <h3>Food name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, excepturi provident officiis! Sunt ipsa.res omnis!
+              </p>
+              <p class="price">&#2547;200</p>
+              <a href="" class="btn btn-primary">Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
